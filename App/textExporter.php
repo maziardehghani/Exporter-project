@@ -1,0 +1,1 @@
+<?phpclass textExporter extends Exporter{    protected $format = '.txt';    public function export()    {        file_put_contents($this->filepath() , $this->data['title']."/n".$this->data['content']);    }    private function filepath()    {        return __DIR__ . '/files/' . rand(100 , 1000).$this->format;    }}

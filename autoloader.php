@@ -1,0 +1,1 @@
+<?phpspl_autoload_register(function ($class){    $class_file = __DIR__. "/App/$class.php";    if(file_exists($class_file)){        include "$class_file";    }else    {        echo $class_file;    }});
